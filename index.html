@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerAI — Intelligent Career Discovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0c10;
+            --surface: #111318;
+            --surface2: #191d26;
+            --border: rgba(255, 255, 255, 0.07);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --gold: #d4a853;
+            --gold-light: #f0c97a;
+            --gold-dim: rgba(212, 168, 83, 0.15);
+            --teal: #38c9b5;
+            --teal-dim: rgba(56, 201, 181, 0.12);
+            --text: #e8e9ed;
+            --text-muted: #6b7280;
+            --text-dim: #9ca3af;
+            --red: #ef4444;
+            --green: #22c55e;
+            --amber: #f59e0b;
+            --radius: 14px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 10% -10%, rgba(212, 168, 83, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 90% 90%, rgba(56, 201, 181, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 32px 60px;
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 52px 0 48px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 44px;
+        }
+
+        .header-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .brand-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        header h1 span {
+            color: var(--gold);
+        }
+
+        .header-meta {
+            text-align: right;
+        }
+
+        .header-meta p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            max-width: 280px;
+            line-height: 1.6;
+        }
+
+        .header-dot {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: var(--teal);
+            font-family: 'DM Mono', monospace;
+        }
+
+        .header-dot::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--teal);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
+        }
+
+        /* ── LAYOUT ── */
+        .main-content {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        /* ── SIDEBAR PANEL ── */
+        .input-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            position: sticky;
+            top: 24px;
+            overflow: hidden;
+        }
+
+        .input-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--teal));
+        }
+
+        .panel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 28px;
+        }
+
+        .panel-title small {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-top: 4px;
+            letter-spacing: 0.01em;
+        }
+
+        /* ── FORM ── */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .form-group small {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: -6px;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 11px 14px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+        }
+
+        .form-group select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 168, 83, 0.1);
+        }
+
+        .form-group select option {
+            background: var(--surface2);
+        }
+
+        /* Skills input */
+        .skills-input {
+            display: flex;
+            gap: 8px;
+        }
+
+        .skills-input input {
+            flex: 1;
+        }
+
+        .btn-add {
+            padding: 11px 18px;
+            background: var(--gold-dim);
+            color: var(--gold);
+            border: 1px solid rgba(212, 168, 83, 0.3);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-add:hover {
+            background: rgba(212, 168, 83, 0.25);
+            border-color: var(--gold);
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 12px;
+            min-height: 28px;
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--teal-dim);
+            border: 1px solid rgba(56, 201, 181, 0.2);
+            color: var(--teal);
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            animation: tagIn 0.2s ease;
+        }
+
+        @keyframes tagIn {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .skill-tag button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 201, 181, 0.2);
+            border: none;
+            color: var(--teal);
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-size: 12px;
+            line-height: 1;
+            transition: background 0.15s;
+        }
+
+        .skill-tag button:hover {
+            background: rgba(56, 201, 181, 0.4);
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            margin-bottom: 22px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold);
+            cursor: pointer;
+        }
+
+        .checkbox-group span {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* Submit button */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8872a 100%);
+            color: #1a0e00;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-family: 'DM Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.25s;
+            letter-spacing: 0.02em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), transparent);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(212, 168, 83, 0.35);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* ── RESULTS PANEL ── */
+        .results-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        .results-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .results-heading h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .results-pill {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--teal);
+            background: var(--teal-dim);
+            border: 1px solid rgba(56, 201, 181, 0.2);
+            padding: 3px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ── LOADING ── */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            gap: 20px;
+        }
+
+        .loader-ring {
+            width: 52px;
+            height: 52px;
+            border: 2px solid var(--border);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-family: 'DM Mono', monospace;
+            letter-spacing: 0.05em;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0.4
+            }
+        }
+
+        /* ── EMPTY STATE ── */
+        .no-results {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            gap: 16px;
+            color: var(--text-muted);
+        }
+
+        .no-results-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+        }
+
+        .no-results p {
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 280px;
+            line-height: 1.6;
+        }
+
+        /* ── ALERTS ── */
+        .success-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            margin-bottom: 28px;
+            font-size: 0.85rem;
+            color: #86efac;
+        }
+
+        .success-message::before {
+            content: '✓';
+            font-weight: 700;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            color: #fca5a5;
+            font-size: 0.85rem;
+        }
+
+        .error-message strong {
+            color: var(--red);
+        }
+
+        /* ── CAREER CARDS ── */
+        .career-card {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px;
+            margin-bottom: 18px;
+            transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+            animation: cardIn 0.35s ease both;
+        }
+
+        .career-card:nth-child(2) {
+            animation-delay: 0.05s;
+        }
+
+        .career-card:nth-child(3) {
+            animation-delay: 0.1s;
+        }
+
+        .career-card:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+
+        .career-card:nth-child(5) {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .career-card:hover {
+            border-color: rgba(212, 168, 83, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(212, 168, 83, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .career-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .career-rank {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--gold);
+            background: var(--gold-dim);
+            border: 1px solid rgba(212, 168, 83, 0.2);
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .career-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text);
+            flex: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .confidence {
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .confidence-very-high {
+            background: rgba(34, 197, 94, 0.12);
+            color: #86efac;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .confidence-high {
+            background: rgba(59, 130, 246, 0.12);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .confidence-medium {
+            background: rgba(245, 158, 11, 0.12);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        /* Scores grid */
+        .career-scores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 1px;
+            margin: 20px 0;
+            background: var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .score-box {
+            text-align: center;
+            padding: 14px 12px;
+            background: var(--surface);
+        }
+
+        .score-label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .score-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        /* Info boxes */
+        .info-box {
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            margin: 12px 0;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .info-box.insight {
+            background: rgba(56, 201, 181, 0.07);
+            border: 1px solid rgba(56, 201, 181, 0.15);
+            color: var(--text-dim);
+        }
+
+        .info-box.insight strong {
+            color: var(--teal);
+        }
+
+        .info-box.market {
+            background: rgba(34, 197, 94, 0.06);
+            border: 1px solid rgba(34, 197, 94, 0.12);
+            color: var(--text-dim);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .info-box.market strong {
+            color: #86efac;
+        }
+
+        .market-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+        }
+
+        .market-badge {
+            padding: 2px 10px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .market-badge.demand-very-high {
+            background: rgba(34, 197, 94, 0.15);
+            color: #86efac;
+            border: 1px solid rgba(34, 197, 94, 0.25);
+        }
+
+        .market-badge.demand-high {
+            background: rgba(56, 201, 181, 0.15);
+            color: var(--teal);
+            border: 1px solid rgba(56, 201, 181, 0.25);
+        }
+
+        .market-badge.demand-moderate {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+
+        .market-badge.demand-low {
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .salary-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .info-box.skills-needed {
+            background: rgba(245, 158, 11, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.15);
+            color: var(--text-dim);
+        }
+
+        .info-box.skills-needed h4 {
+            color: #fcd34d;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .info-box.roadmap {
+            background: rgba(139, 92, 246, 0.06);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            color: var(--text-dim);
+        }
+
+        .info-box.roadmap h4 {
+            color: #c4b5fd;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .info-box.roadmap strong {
+            color: #c4b5fd;
+        }
+
+        .roadmap-item {
+            padding: 6px 0;
+            font-size: 0.875rem;
+            border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+        }
+
+        .roadmap-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Skill badges */
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .skill-badge {
+            background: rgba(245, 158, 11, 0.12);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 4px 11px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1100px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .input-section {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .page-wrap {
+                padding: 0 16px 40px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 36px 0 32px;
+            }
+
+            .header-meta {
+                text-align: left;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .career-name {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Divider */
+        .form-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 6px 0 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <header>
+            <div class="header-brand">
+                <span class="brand-label">AI-Powered · NLP · Career Intelligence</span>
+                <h1>Career<span>AI</span></h1>
+            </div>
+            <div class="header-meta">
+                <p>Discover your ideal career path using advanced NLP and personality analysis</p>
+                <span class="header-dot">System Online</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- INPUT SIDEBAR -->
+            <div class="input-section">
+                <h2 class="panel-title">
+                    Your Profile
+                    <small>Tell us about yourself to get started</small>
+                </h2>
+
+                <div class="form-group">
+                    <label>Your Skills</label>
+                    <small>e.g., Python, Data Analysis, Communication</small>
+                    <div class="skills-input">
+                        <input type="text" id="skillInput" placeholder="Enter a skill…" />
+                        <button class="btn-add" onclick="addSkill()">+ Add</button>
+                    </div>
+                    <div class="skills-tags" id="skillsTags"></div>
+                </div>
+
+                <div class="form-divider"></div>
+
+                <div class="form-group">
+                    <label>Years of Experience</label>
+                    <input type="number" id="experienceYears" min="0" max="50" value="0" />
+                </div>
+
+                <div class="form-group">
+                    <label>Education Level</label>
+                    <select id="educationLevel">
+
+                        <!-- Secondary Education -->
+                        <optgroup label="Secondary">
+                            <option value="Primary School">Primary School</option>
+                            <option value="Middle School">Middle School</option>
+                            <option value="High School">High School (10th)</option>
+                            <option value="Higher Secondary">Higher Secondary / 12th (10+2)</option>
+                            <option value="Open Schooling">Open Schooling (NIOS / State Open)</option>
+                        </optgroup>
+
+                        <!-- Vocational & Skill Training -->
+                        <optgroup label="Vocational & Diploma">
+                            <option value="Certificate Course">Certificate Course</option>
+                            <option value="Diploma">Diploma (Polytechnic)</option>
+                            <option value="Advanced Diploma">Advanced Diploma</option>
+                            <option value="ITI">ITI / Industrial Training</option>
+                            <option value="Apprenticeship">Apprenticeship</option>
+                            <option value="Skill Development Program">Skill Development Program</option>
+                        </optgroup>
+
+                        <!-- Undergraduate Degrees -->
+                        <optgroup label="Undergraduate">
+                            <option value="Associate Degree">Associate Degree (2-Year)</option>
+                            <option value="BA">B.A. (Bachelor of Arts)</option>
+                            <option value="BSc">B.Sc. (Bachelor of Science)</option>
+                            <option value="BCom">B.Com (Bachelor of Commerce)</option>
+                            <option value="BTech">B.Tech / B.E. (Engineering)</option>
+                            <option value="BCA">BCA (Computer Applications)</option>
+                            <option value="BBA">BBA (Business Administration)</option>
+                            <option value="BDes">B.Des (Design)</option>
+                            <option value="BPharm">B.Pharm (Pharmacy)</option>
+                            <option value="BEd">B.Ed (Education)</option>
+                            <option value="BArch">B.Arch (Architecture)</option>
+                            <option value="MBBS">MBBS (Medical Degree)</option>
+                            <option value="BDS">BDS (Dental)</option>
+                            <option value="BPT">BPT (Physiotherapy)</option>
+                            <option value="BHM">BHM (Hotel Management)</option>
+                            <option value="BJMC">BJMC (Journalism & Mass Communication)</option>
+                            <option value="LLB">LLB (Law)</option>
+                            <option value="BFA">BFA (Fine Arts)</option>
+                        </optgroup>
+
+                        <!-- Postgraduate Degrees -->
+                        <optgroup label="Postgraduate">
+                            <option value="Postgraduate Diploma">Postgraduate Diploma (PGD)</option>
+                            <option value="MA">M.A. (Master of Arts)</option>
+                            <option value="MSc">M.Sc. (Master of Science)</option>
+                            <option value="MCom">M.Com (Master of Commerce)</option>
+                            <option value="MTech">M.Tech / M.E. (Engineering)</option>
+                            <option value="MCA">MCA (Computer Applications)</option>
+                            <option value="MBA">MBA (Business Administration)</option>
+                            <option value="MDes">M.Des (Design)</option>
+                            <option value="MPharm">M.Pharm (Pharmacy)</option>
+                            <option value="MEd">M.Ed (Education)</option>
+                            <option value="MArch">M.Arch (Architecture)</option>
+                            <option value="MPH">MPH (Public Health)</option>
+                            <option value="MD">MD / MS (Medical Specialization)</option>
+                            <option value="LLM">LLM (Law)</option>
+                            <option value="MS International">MS (International Master's)</option>
+                        </optgroup>
+
+                        <!-- Doctoral -->
+                        <optgroup label="Doctoral">
+                            <option value="PhD">Ph.D. (Doctorate)</option>
+                            <option value="Professional Doctorate">Professional Doctorate</option>
+                            <option value="Post Doctoral">Post-Doctoral Research</option>
+                        </optgroup>
+
+                        <!-- Professional Certifications -->
+                        <optgroup label="Professional Certifications">
+                            <option value="CA">CA (Chartered Accountant)</option>
+                            <option value="CS">CS (Company Secretary)</option>
+                            <option value="CMA">CMA (Cost & Management Accountant)</option>
+                            <option value="CFA">CFA (Chartered Financial Analyst)</option>
+                            <option value="PMP">PMP (Project Management Professional)</option>
+                            <option value="AWS Certified">AWS Certified Professional</option>
+                            <option value="Google Certified">Google Certification</option>
+                            <option value="Microsoft Certified">Microsoft Certification</option>
+                            <option value="Cisco Certified">Cisco (CCNA/CCNP)</option>
+                            <option value="Data Science Certification">Data Science Certification</option>
+                            <option value="Digital Marketing Certification">Digital Marketing Certification</option>
+                            <option value="Cybersecurity Certification">Cybersecurity Certification</option>
+                        </optgroup>
+
+                        <!-- Government & Competitive Exams -->
+                        <optgroup label="Government Exams">
+                            <option value="UPSC">UPSC Civil Services</option>
+                            <option value="SSC">SSC</option>
+                            <option value="Banking Exams">Bank PO / Clerk</option>
+                            <option value="Railway Exams">RRB</option>
+                            <option value="State PSC">State PSC</option>
+                            <option value="Defence Exams">NDA / CDS / AFCAT</option>
+                        </optgroup>
+
+                        <!-- Alternative & Modern Education -->
+                        <optgroup label="Alternative Education">
+                            <option value="Online Degree">Online Degree</option>
+                            <option value="Distance Education">Distance Education</option>
+                            <option value="Bootcamp">Coding Bootcamp</option>
+                            <option value="Self Taught">Self-Taught / No Formal Degree</option>
+                        </optgroup>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Location</label>
+                    <input type="text" id="location" value="India" />
+                </div>
+
+                <label class="checkbox-group">
+                    <input type="checkbox" id="includeMarketData" checked />
+                    <span>Include job market analysis</span>
+                </label>
+
+                <button class="submit-btn" onclick="getRecommendations()" id="submitBtn">
+                    Get Career Recommendations →
+                </button>
+            </div>
+
+            <!-- RESULTS PANEL -->
+            <div class="results-section">
+                <div class="results-heading">
+                    <h2>Career Recommendations</h2>
+                    <span class="results-pill" id="resultsPill">Awaiting Input</span>
+                </div>
+
+                <div id="resultsContainer">
+                    <div class="no-results">
+                        <div class="no-results-icon">✦</div>
+                        <p>Fill in your details and click "Get Career Recommendations" to discover your ideal path.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:8000';
+        let skills = [];
+
+        function addSkill() {
+            const input = document.getElementById('skillInput');
+            const skillText = input.value.trim();
+            if (!skillText) { alert('Please enter a skill'); return; }
+            if (skills.includes(skillText)) { alert('Skill already added'); return; }
+            skills.push(skillText);
+            input.value = '';
+            renderSkills();
+        }
+
+        function removeSkill(skill) {
+            skills = skills.filter(s => s !== skill);
+            renderSkills();
+        }
+
+        function renderSkills() {
+            const container = document.getElementById('skillsTags');
+            container.innerHTML = skills.map(skill => `
+                <div class="skill-tag">
+                    ${skill}
+                    <button onclick="removeSkill('${skill}')">×</button>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('skillInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') addSkill();
+            });
+        });
+
+        async function getRecommendations() {
+            if (skills.length === 0) { alert('Please add at least one skill'); return; }
+
+            const submitBtn = document.getElementById('submitBtn');
+            const pill = document.getElementById('resultsPill');
+            submitBtn.disabled = true;
+            pill.textContent = 'Processing…';
+            pill.style.color = 'var(--gold)';
+            pill.style.borderColor = 'rgba(212,168,83,0.3)';
+            pill.style.background = 'var(--gold-dim)';
+
+            const resultsContainer = document.getElementById('resultsContainer');
+            resultsContainer.innerHTML = `
+                <div class="loading">
+                    <div class="loader-ring"></div>
+                    <p>Analyzing your profile…</p>
+                </div>
+            `;
+
+            try {
+                const response = await fetch(`${API_URL}/api/v1/recommendations`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        skills: {
+                            skills: skills,
+                            experience_years: parseInt(document.getElementById('experienceYears').value) || 0,
+                            education_level: document.getElementById('educationLevel').value
+                        },
+                        location: document.getElementById('location').value,
+                        use_bert: true,
+                        include_market_data: document.getElementById('includeMarketData').checked
+                    })
+                });
+
+                if (!response.ok) throw new Error(`API error: ${response.status}`);
+                const data = await response.json();
+                displayResults(data);
+            } catch (error) {
+                pill.textContent = 'Error';
+                pill.style.color = '#fca5a5';
+                pill.style.borderColor = 'rgba(239,68,68,0.25)';
+                pill.style.background = 'rgba(239,68,68,0.08)';
+                resultsContainer.innerHTML = `
+                    <div class="error-message">
+                        <strong>Connection Error:</strong> ${error.message}<br/>
+                        <small style="color:var(--text-muted);margin-top:6px;display:block;">Make sure the backend is running at http://localhost:8000</small>
+                    </div>
+                `;
+            } finally {
+                submitBtn.disabled = false;
+            }
+        }
+
+        function displayResults(data) {
+            const container = document.getElementById('resultsContainer');
+            const pill = document.getElementById('resultsPill');
+
+            if (!data.recommendations || data.recommendations.length === 0) {
+                pill.textContent = 'No Results';
+                container.innerHTML = '<div class="no-results"><div class="no-results-icon">∅</div><p>No recommendations found. Try adding different skills.</p></div>';
+                return;
+            }
+
+            pill.textContent = `${data.recommendations.length} Matches`;
+            pill.style.color = 'var(--teal)';
+            pill.style.borderColor = 'rgba(56,201,181,0.2)';
+            pill.style.background = 'var(--teal-dim)';
+
+            let html = `
+                <div class="success-message">
+                    Analyzed ${data.total_careers_analyzed} careers using ${data.model_used} in ${data.processing_time_ms.toFixed(0)}ms
+                </div>
+            `;
+
+            html += data.recommendations.map(rec => {
+                const confClass = rec.composite_score >= 80 ? 'confidence-very-high' :
+                    rec.composite_score >= 65 ? 'confidence-high' : 'confidence-medium';
+
+                return `
+                    <div class="career-card">
+                        <div class="career-header">
+                            <div class="career-rank">${rec.rank}</div>
+                            <div class="career-name">${rec.career_name}</div>
+                            <div class="confidence ${confClass}">${rec.confidence_level}</div>
+                        </div>
+
+                        <div class="career-scores">
+                            <div class="score-box">
+                                <div class="score-label">Overall</div>
+                                <div class="score-value">${rec.composite_score.toFixed(0)}</div>
+                            </div>
+                            <div class="score-box">
+                                <div class="score-label">Skill Match</div>
+                                <div class="score-value">${rec.skill_match.toFixed(0)}<span style="font-size:0.8rem;opacity:0.6">%</span></div>
+                            </div>
+                            ${rec.interest_match ? `
+                            <div class="score-box">
+                                <div class="score-label">Interest</div>
+                                <div class="score-value">${rec.interest_match.toFixed(0)}<span style="font-size:0.8rem;opacity:0.6">%</span></div>
+                            </div>` : ''}
+                            ${rec.personality_match ? `
+                            <div class="score-box">
+                                <div class="score-label">Personality</div>
+                                <div class="score-value">${rec.personality_match.toFixed(0)}<span style="font-size:0.8rem;opacity:0.6">%</span></div>
+                            </div>` : ''}
+                        </div>
+
+                        ${rec.explanation && !rec.explanation.includes('SBERT semantic similarity') ? `
+                        <div class="info-box insight">
+                            <strong>Why this career?</strong> ${rec.explanation}
+                        </div>` : ''}
+
+                        ${(rec.market_demand && rec.market_demand !== 'N/A') || (rec.average_salary && rec.average_salary !== 'N/A' && rec.average_salary !== 'null' && rec.average_salary !== null) ? `
+                        <div class="info-box market">
+                            ${rec.market_demand && rec.market_demand !== 'N/A' ? `<span class="market-row"><strong>Market Demand:</strong> <span class="market-badge demand-${rec.market_demand.toLowerCase().replace(/\s+/g, '-')}">${rec.market_demand}</span></span>` : ''}
+                            ${rec.average_salary && rec.average_salary !== 'N/A' && rec.average_salary !== 'null' && rec.average_salary !== null ? `<span class="market-row"><strong>Est. Salary Range:</strong> <span class="salary-value">${rec.average_salary}</span></span>` : ''}
+                        </div>` : ''}
+
+                        ${rec.missing_skills && rec.missing_skills.length > 0 ? `
+                        <div class="info-box skills-needed">
+                            <h4>Skills to Acquire</h4>
+                            <div class="skill-badges">
+                                ${rec.missing_skills.map(s => `<span class="skill-badge">${s}</span>`).join('')}
+                            </div>
+                        </div>` : ''}
+
+                        ${rec.learning_roadmap && rec.learning_roadmap.total_time ? `
+                        <div class="info-box roadmap">
+                            <h4>Learning Roadmap · ${rec.learning_roadmap.total_time}</h4>
+                            ${rec.learning_roadmap.phases ? rec.learning_roadmap.phases.map((phase, i) => `
+                                <div class="roadmap-item">
+                                    <strong>Phase ${i + 1}:</strong> ${phase}
+                                </div>
+                            `).join('') : ''}
+                        </div>` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
