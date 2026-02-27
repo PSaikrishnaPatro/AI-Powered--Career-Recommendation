@@ -1,5 +1,6 @@
 # Core Dependencies for Streamlit Deployment
 streamlit==1.54.0
+uvicorn[standard]
 pandas==2.3.3
 numpy==2.4.2
 
