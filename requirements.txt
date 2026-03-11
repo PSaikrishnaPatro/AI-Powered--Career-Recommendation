@@ -1,14 +1,19 @@
 # Core Dependencies for Streamlit Deployment
+# Hybrid Career Recommendation System
 streamlit==1.54.0
 uvicorn[standard]
 pandas==2.3.3
 numpy==2.4.2
 
-# ML & NLP
-sentence-transformers==5.2.3
+# ML & NLP - Hybrid System
+sentence-transformers==5.2.3  # Includes all-mpnet-base-v2 and CrossEncoder support
 torch
 scikit-learn
 scipy
+
+# FastAPI (for API deployment)
+fastapi==0.104.1
+pydantic>=2.0.0  # Use latest compatible version to avoid build issues
 
 # Utilities
 python-dateutil==2.8.2
