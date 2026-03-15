@@ -1,0 +1,501 @@
+user_skills,career,required_skills,is_good_match
+"python, data analysis, project management, java, problem solving, debugging",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"java, design, machine learning, writing, creativity, leadership",Graphic Designer,"design, creativity, communication",0
+"creativity, leadership, python",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"python, javascript, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"design, writing, javascript, sql, data analysis, debugging",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, teaching, data analysis",Graphic Designer,"design, creativity, communication",0
+"communication, sql, debugging, problem solving, teamwork",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"testing, leadership, problem solving, java",Graphic Designer,"design, creativity, communication",0
+"design, machine learning, java",Project Manager,"leadership, project management, communication, teamwork",0
+"design, writing, teaching, testing, teamwork, project management, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"debugging, design, problem solving, data analysis",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, teamwork, problem solving, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, java, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, design, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, project management, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, leadership, teaching, communication, project management",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, sql, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"problem solving, leadership, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"debugging, machine learning, sql, teaching, communication, writing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, writing, design, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, sql, problem solving, cloud computing, teaching, data analysis, creativity",Graphic Designer,"design, creativity, communication",0
+"problem solving, java, javascript, cloud computing",Graphic Designer,"design, creativity, communication",0
+"problem solving, machine learning, data analysis, project management, writing, creativity",Graphic Designer,"design, creativity, communication",0
+"creativity, javascript, teaching, sql",Graphic Designer,"design, creativity, communication",0
+"leadership, design, testing, communication, teaching, java, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, leadership, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"data analysis, teamwork, communication, sql, problem solving, java",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, data analysis, machine learning, testing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teaching, testing, communication, writing, design, data analysis, creativity",Graphic Designer,"design, creativity, communication",1
+"java, communication, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, writing, java, data analysis, leadership, python",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"cloud computing, sql, leadership, testing, design, machine learning, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, design, java, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, writing, cloud computing, testing, data analysis, python, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"cloud computing, java, teaching, leadership, communication, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, debugging, teaching, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, communication, writing, creativity, python, data analysis, javascript",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, sql, python, creativity, communication, cloud computing, leadership",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"sql, leadership, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"sql, problem solving, teaching",Graphic Designer,"design, creativity, communication",0
+"machine learning, cloud computing, testing, problem solving, creativity, javascript, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"python, teamwork, problem solving, project management, leadership, creativity, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"creativity, teaching, design, debugging, writing",Project Manager,"leadership, project management, communication, teamwork",0
+"design, debugging, python, testing, sql, teamwork, leadership",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, communication, writing, leadership, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, communication, debugging, teaching, machine learning, javascript, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"sql, debugging, python, machine learning, problem solving, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"javascript, creativity, java, cloud computing, leadership",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, communication, writing, creativity, testing, machine learning, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"design, project management, testing, java, javascript, teamwork, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"debugging, teamwork, communication, teaching, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, creativity, cloud computing, java",Graphic Designer,"design, creativity, communication",0
+"debugging, design, problem solving, writing, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, writing, teamwork, testing, java, project management, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"cloud computing, teamwork, communication",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"debugging, design, python, project management, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"cloud computing, writing, sql",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"project management, java, leadership, teamwork, javascript, testing",Project Manager,"leadership, project management, communication, teamwork",1
+"problem solving, java, javascript, writing",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, python, communication, teaching, javascript, cloud computing, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"communication, data analysis, javascript",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"testing, teamwork, java, javascript, debugging",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, data analysis, leadership, java, python, teaching, communication",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"cloud computing, teaching, problem solving, teamwork",Graphic Designer,"design, creativity, communication",0
+"leadership, java, teaching, javascript, project management",Graphic Designer,"design, creativity, communication",0
+"machine learning, teamwork, communication, design, creativity",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"data analysis, machine learning, writing, creativity, problem solving, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"writing, design, creativity",Graphic Designer,"design, creativity, communication",0
+"data analysis, writing, leadership, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, teamwork, communication, leadership, python",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"creativity, python, machine learning",Graphic Designer,"design, creativity, communication",0
+"communication, teaching, javascript, project management",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, javascript, cloud computing, creativity, debugging, sql, design",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, project management, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, cloud computing, sql, leadership, data analysis, communication",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, python, teamwork, cloud computing",Graphic Designer,"design, creativity, communication",0
+"testing, sql, creativity",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, sql, project management, javascript",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"data analysis, project management, writing, problem solving, design",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"javascript, creativity, cloud computing, project management, writing, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, problem solving, data analysis, design",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, creativity, data analysis, testing, communication, problem solving, design",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, debugging, python, writing, javascript, testing",Graphic Designer,"design, creativity, communication",0
+"sql, project management, design, debugging, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, communication, writing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"data analysis, testing, teamwork",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, javascript, python, teaching, communication, sql, design",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"sql, communication, problem solving, python",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"java, writing, cloud computing, leadership, project management, data analysis",Graphic Designer,"design, creativity, communication",0
+"leadership, problem solving, design, python",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, writing, project management, leadership, cloud computing, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, writing, javascript",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, cloud computing, sql, writing, problem solving, testing, leadership",Graphic Designer,"design, creativity, communication",0
+"teamwork, problem solving, machine learning",Graphic Designer,"design, creativity, communication",0
+"design, debugging, problem solving, teaching, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"python, data analysis, problem solving, project management, teamwork, cloud computing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"communication, leadership, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"machine learning, testing, teamwork, java, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, javascript, writing, sql, testing, debugging",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"machine learning, debugging, sql, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"python, machine learning, leadership, cloud computing, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, python, creativity, problem solving, teamwork, data analysis, java",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"design, leadership, problem solving, sql, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"python, project management, data analysis, testing, leadership, teaching",Graphic Designer,"design, creativity, communication",0
+"debugging, project management, writing, communication, problem solving, testing",Graphic Designer,"design, creativity, communication",0
+"debugging, teamwork, machine learning, javascript, python, design, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, teamwork, testing, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, teaching, javascript, cloud computing, communication, debugging, data analysis",Graphic Designer,"design, creativity, communication",0
+"javascript, teaching, communication, teamwork, cloud computing, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, project management, problem solving, communication, cloud computing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"machine learning, python, teaching, javascript, problem solving, teamwork, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"debugging, testing, javascript, sql, creativity, leadership, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"testing, leadership, sql, project management, communication, debugging",Graphic Designer,"design, creativity, communication",0
+"leadership, testing, debugging",Graphic Designer,"design, creativity, communication",0
+"java, testing, leadership, creativity, data analysis",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, communication, cloud computing, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, leadership, teamwork, python, design, writing",Graphic Designer,"design, creativity, communication",0
+"project management, teamwork, communication, python, testing, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, javascript, leadership, data analysis",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, writing, java, design, cloud computing, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"problem solving, data analysis, project management, design",Project Manager,"leadership, project management, communication, teamwork",0
+"leadership, teaching, teamwork, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"data analysis, sql, python, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, cloud computing, java, teaching, design, problem solving",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, writing, problem solving, python, sql, teamwork, javascript",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"teamwork, problem solving, writing, design, testing, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"creativity, problem solving, java, teamwork, python, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"problem solving, javascript, cloud computing, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, testing, project management, machine learning, cloud computing",Graphic Designer,"design, creativity, communication",0
+"debugging, problem solving, machine learning, writing, testing, sql",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"leadership, communication, project management, debugging, design",Graphic Designer,"design, creativity, communication",0
+"teamwork, debugging, writing, design, communication, python",Project Manager,"leadership, project management, communication, teamwork",0
+"cloud computing, sql, problem solving, teamwork",Graphic Designer,"design, creativity, communication",0
+"teaching, java, leadership",Project Manager,"leadership, project management, communication, teamwork",0
+"python, teaching, project management, testing, problem solving, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, javascript, sql, problem solving, cloud computing, java, project management",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"writing, design, leadership, problem solving, teamwork, data analysis, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"cloud computing, javascript, communication",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"design, project management, teaching, problem solving",Graphic Designer,"design, creativity, communication",0
+"data analysis, teamwork, communication, project management, debugging, java, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, cloud computing, testing, javascript, java, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"project management, data analysis, python, debugging, creativity, javascript",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, debugging, machine learning, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, design, data analysis, cloud computing, debugging, java",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, data analysis, leadership, python, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"cloud computing, java, data analysis, creativity, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, javascript, design, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"leadership, python, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"creativity, debugging, python, problem solving, sql, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"python, project management, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"creativity, python, java, cloud computing, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, design, java",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, project management, writing, creativity, design",Graphic Designer,"design, creativity, communication",0
+"testing, design, communication, data analysis, leadership",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, javascript, writing, java, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, communication, python, creativity, project management",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, cloud computing, testing, teamwork",Graphic Designer,"design, creativity, communication",0
+"java, problem solving, data analysis, design",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, machine learning, teaching, writing, creativity, javascript, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"sql, communication, javascript, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, teaching, java, design, project management, leadership",Project Manager,"leadership, project management, communication, teamwork",0
+"data analysis, machine learning, creativity, communication, design",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, java, design",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, cloud computing, machine learning, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, debugging, creativity, java, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"cloud computing, leadership, teamwork, writing, communication, creativity",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"python, communication, debugging, teaching, teamwork, sql",Graphic Designer,"design, creativity, communication",0
+"creativity, project management, teaching, testing, machine learning, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"machine learning, teamwork, design, creativity, writing",Graphic Designer,"design, creativity, communication",0
+"teamwork, leadership, testing, machine learning, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"project management, machine learning, communication, testing, teaching, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teamwork, java, leadership, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"project management, data analysis, design",Graphic Designer,"design, creativity, communication",0
+"teaching, communication, data analysis",Graphic Designer,"design, creativity, communication",0
+"machine learning, teamwork, creativity",Graphic Designer,"design, creativity, communication",0
+"problem solving, leadership, python, machine learning, teamwork",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"communication, testing, java, sql",Graphic Designer,"design, creativity, communication",0
+"teamwork, javascript, project management, problem solving, design, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, teaching, data analysis",Graphic Designer,"design, creativity, communication",0
+"writing, data analysis, problem solving, design, teamwork, creativity, java",Graphic Designer,"design, creativity, communication",0
+"creativity, data analysis, teamwork",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"machine learning, communication, writing, cloud computing",Graphic Designer,"design, creativity, communication",0
+"teamwork, sql, cloud computing, creativity",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"teamwork, python, writing",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, javascript, project management, testing, java, python",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, leadership, communication, testing, creativity, machine learning, data analysis",Project Manager,"leadership, project management, communication, teamwork",1
+"debugging, python, teamwork",Graphic Designer,"design, creativity, communication",0
+"leadership, design, creativity, python, problem solving, java, sql",Graphic Designer,"design, creativity, communication",0
+"creativity, teamwork, writing, communication, javascript",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, data analysis, teamwork, leadership",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, creativity, design, python, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, debugging, problem solving, teamwork, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"java, machine learning, problem solving, creativity, leadership",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, creativity, project management",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, python, leadership, sql, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"cloud computing, creativity, data analysis",Graphic Designer,"design, creativity, communication",0
+"writing, testing, creativity, data analysis, design, teamwork, teaching",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"communication, creativity, machine learning, sql, teamwork",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, sql, python, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"creativity, debugging, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, python, teamwork, design",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, sql, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"teamwork, data analysis, writing, debugging, leadership, machine learning, design",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, sql, project management, javascript, data analysis",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, teaching, data analysis, communication, python, java",Project Manager,"leadership, project management, communication, teamwork",0
+"python, teamwork, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"teaching, writing, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"cloud computing, communication, teamwork, writing, testing, design, java",Graphic Designer,"design, creativity, communication",0
+"debugging, teaching, leadership, machine learning, communication, creativity, writing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, testing, problem solving, writing, teaching, creativity",Graphic Designer,"design, creativity, communication",0
+"teaching, java, data analysis",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"python, project management, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"sql, machine learning, javascript, writing, teaching, leadership, testing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"java, machine learning, communication, javascript, teamwork",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"communication, design, teamwork, project management",Graphic Designer,"design, creativity, communication",0
+"problem solving, project management, sql, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"python, communication, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, writing, design, javascript, python",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"communication, creativity, python, data analysis, javascript, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"debugging, creativity, machine learning, design, python, writing, java",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, leadership, data analysis, project management, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"javascript, communication, sql, leadership",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"python, data analysis, leadership, writing, sql",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, writing, debugging, teamwork, data analysis, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, testing, teaching, design",Graphic Designer,"design, creativity, communication",0
+"project management, python, java",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, python, writing",Graphic Designer,"design, creativity, communication",0
+"writing, machine learning, communication",Graphic Designer,"design, creativity, communication",0
+"machine learning, teamwork, project management, cloud computing, creativity, teaching, communication",Graphic Designer,"design, creativity, communication",0
+"cloud computing, leadership, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, machine learning, teamwork",Project Manager,"leadership, project management, communication, teamwork",0
+"java, project management, problem solving, sql, communication",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teamwork, python, creativity",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, debugging, java, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teamwork, leadership, project management",Project Manager,"leadership, project management, communication, teamwork",1
+"design, javascript, writing, communication, creativity, sql, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"python, testing, data analysis",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, python, teamwork, leadership, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, communication, machine learning, design",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"machine learning, cloud computing, data analysis, javascript, design",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, problem solving, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, data analysis, project management, writing, teaching, testing, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, project management, machine learning, sql",Graphic Designer,"design, creativity, communication",0
+"java, sql, design, project management, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"testing, project management, cloud computing, javascript, communication, writing",Project Manager,"leadership, project management, communication, teamwork",0
+"testing, machine learning, debugging, cloud computing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"project management, debugging, design",Project Manager,"leadership, project management, communication, teamwork",0
+"javascript, java, project management, data analysis, debugging, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, teaching, java, design, project management, writing, cloud computing",Graphic Designer,"design, creativity, communication",0
+"project management, javascript, creativity, teamwork, testing, data analysis, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"data analysis, leadership, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"debugging, data analysis, sql, design, machine learning, testing",Graphic Designer,"design, creativity, communication",0
+"data analysis, sql, javascript",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"leadership, data analysis, project management",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"sql, leadership, creativity, teaching, design, machine learning, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"javascript, debugging, teaching, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, java, machine learning, communication, testing, leadership, debugging",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, machine learning, teamwork, communication, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"sql, leadership, writing, teamwork, design, python",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, debugging, sql, communication, java, javascript, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"machine learning, leadership, sql, cloud computing, problem solving, debugging",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, cloud computing, javascript, problem solving, design, writing, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, communication, java, teamwork",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"project management, teamwork, debugging, creativity, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"java, communication, project management, problem solving, cloud computing, leadership, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, leadership, communication",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, python, teaching, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"problem solving, teamwork, python, sql, machine learning, javascript",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"debugging, design, project management, teaching, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, cloud computing, problem solving, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, problem solving, javascript, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, teaching, teamwork, project management, data analysis, python, java",Graphic Designer,"design, creativity, communication",0
+"design, leadership, machine learning, debugging, data analysis, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, python, testing, java, writing, data analysis",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, python, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"sql, machine learning, cloud computing, teaching, problem solving, java, design",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"cloud computing, data analysis, design",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, machine learning, creativity, python, teamwork, sql, java",Graphic Designer,"design, creativity, communication",0
+"creativity, java, writing, leadership, testing, python, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, sql, machine learning, writing, debugging, problem solving, python",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, java, javascript, python, project management, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"design, project management, testing",Graphic Designer,"design, creativity, communication",0
+"problem solving, project management, creativity, sql, writing, leadership, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"java, teaching, javascript, leadership, writing, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"communication, debugging, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, teaching, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, design, problem solving, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"machine learning, creativity, leadership, java, writing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, teaching, debugging, javascript, python, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, data analysis, java, project management",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teamwork, cloud computing, teaching, creativity",Graphic Designer,"design, creativity, communication",0
+"debugging, communication, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"testing, creativity, writing, project management, machine learning",Graphic Designer,"design, creativity, communication",0
+"teamwork, project management, writing, design, communication, testing, javascript",Graphic Designer,"design, creativity, communication",0
+"creativity, writing, data analysis, javascript, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"teaching, communication, project management, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, problem solving, project management, teamwork, debugging, communication, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, machine learning, project management, debugging, teaching, leadership",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, design, data analysis, problem solving, machine learning, cloud computing",Graphic Designer,"design, creativity, communication",0
+"design, creativity, machine learning, problem solving, python, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, python, cloud computing, writing, testing",Graphic Designer,"design, creativity, communication",0
+"python, cloud computing, design, debugging",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, communication, java, testing, writing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"data analysis, sql, machine learning, leadership, debugging, creativity, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"data analysis, machine learning, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, machine learning, cloud computing, leadership, writing",Graphic Designer,"design, creativity, communication",0
+"teaching, python, writing, machine learning, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"problem solving, javascript, writing, communication, data analysis, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"creativity, leadership, java, python, cloud computing, problem solving, data analysis",Graphic Designer,"design, creativity, communication",0
+"python, project management, leadership, creativity, problem solving",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, machine learning, design, python, teaching, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, creativity, debugging, machine learning, python, design, data analysis",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"data analysis, problem solving, design, creativity, sql, debugging, javascript",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, data analysis, teaching, leadership, javascript, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, machine learning, leadership, communication, debugging",Graphic Designer,"design, creativity, communication",0
+"javascript, communication, java, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"machine learning, communication, data analysis",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"python, javascript, teamwork, data analysis, testing, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"writing, teamwork, javascript, creativity, java, communication",Graphic Designer,"design, creativity, communication",0
+"teaching, java, problem solving, teamwork, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"data analysis, problem solving, java, debugging",Graphic Designer,"design, creativity, communication",0
+"project management, creativity, cloud computing, teamwork, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, problem solving, design, data analysis, communication",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"java, testing, debugging, python, teamwork, leadership",Graphic Designer,"design, creativity, communication",0
+"testing, cloud computing, python, project management, machine learning, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, machine learning, python, problem solving, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"teaching, project management, machine learning",Graphic Designer,"design, creativity, communication",0
+"project management, communication, machine learning, leadership, java, teamwork, python",Graphic Designer,"design, creativity, communication",0
+"leadership, machine learning, java, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"creativity, debugging, cloud computing, communication, python, testing, java",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"javascript, creativity, leadership, project management",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"debugging, testing, data analysis, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, project management, problem solving, java",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, sql, teaching, java",Graphic Designer,"design, creativity, communication",0
+"writing, testing, java",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teamwork, teaching, leadership, problem solving, writing, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, creativity, teamwork, debugging, javascript",Project Manager,"leadership, project management, communication, teamwork",0
+"sql, python, writing, cloud computing, project management, java",Graphic Designer,"design, creativity, communication",0
+"cloud computing, python, machine learning, leadership, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"design, creativity, sql, debugging, cloud computing, python, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, teaching, java",Graphic Designer,"design, creativity, communication",0
+"data analysis, communication, creativity, teaching, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"python, data analysis, sql, creativity",Graphic Designer,"design, creativity, communication",0
+"design, debugging, cloud computing, machine learning, teamwork, project management",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"cloud computing, project management, writing, python, testing, teaching",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, sql, teaching, design, machine learning, testing, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, debugging, writing, cloud computing, teaching, python, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, sql, creativity, leadership, testing, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"teamwork, data analysis, writing, creativity, communication, machine learning, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"machine learning, sql, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"project management, javascript, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"cloud computing, leadership, project management",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"cloud computing, communication, python, data analysis, sql, testing, java",Graphic Designer,"design, creativity, communication",0
+"design, sql, python, javascript",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"python, sql, machine learning, leadership",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, project management, java, cloud computing, teaching, teamwork, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, cloud computing, creativity",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, design, python, sql",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"java, writing, teamwork, cloud computing, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"writing, debugging, javascript, leadership, teaching",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"creativity, debugging, problem solving, teaching, data analysis",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"creativity, testing, communication, python",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, sql, project management, machine learning, python, testing",Graphic Designer,"design, creativity, communication",0
+"cloud computing, project management, problem solving, data analysis, leadership, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, data analysis, creativity, teaching, sql, debugging, python",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, cloud computing, teamwork, debugging, javascript, design, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, javascript, creativity, teaching, cloud computing, machine learning",Graphic Designer,"design, creativity, communication",0
+"testing, teaching, project management, machine learning, leadership",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"testing, debugging, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, project management, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"project management, testing, machine learning, teamwork",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"teaching, teamwork, design, problem solving, communication, writing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"writing, teamwork, creativity, data analysis, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"creativity, debugging, leadership, teaching, sql, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, leadership, sql, writing, debugging, cloud computing, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"machine learning, javascript, design, writing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"machine learning, data analysis, testing",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"java, javascript, project management, sql, communication, cloud computing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"javascript, data analysis, debugging",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"creativity, data analysis, cloud computing, debugging, teamwork, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"creativity, teaching, problem solving, data analysis, communication, leadership",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"writing, cloud computing, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, debugging, javascript, design, machine learning, leadership, java",Project Manager,"leadership, project management, communication, teamwork",0
+"problem solving, javascript, machine learning, cloud computing, communication, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"machine learning, teamwork, python, problem solving, cloud computing, data analysis, teaching",Graphic Designer,"design, creativity, communication",0
+"teamwork, java, python, design, teaching, problem solving",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, sql, data analysis, java, python, writing, debugging",Graphic Designer,"design, creativity, communication",0
+"writing, project management, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, design, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"communication, python, design, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"leadership, javascript, problem solving, cloud computing, python, sql",Graphic Designer,"design, creativity, communication",0
+"testing, cloud computing, problem solving, sql, machine learning, design",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"leadership, machine learning, data analysis",Graphic Designer,"design, creativity, communication",0
+"creativity, teaching, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"design, teaching, communication",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"python, writing, design, project management, sql, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"writing, cloud computing, javascript, python",Graphic Designer,"design, creativity, communication",0
+"data analysis, design, project management, python, writing, javascript, testing",Project Manager,"leadership, project management, communication, teamwork",0
+"java, cloud computing, sql, data analysis, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, leadership, communication",Graphic Designer,"design, creativity, communication",0
+"design, leadership, project management, java",Graphic Designer,"design, creativity, communication",0
+"testing, creativity, teaching, cloud computing, python, javascript, machine learning",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, creativity, javascript, data analysis, communication",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"machine learning, teaching, javascript, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, design, machine learning, communication, cloud computing",Project Manager,"leadership, project management, communication, teamwork",0
+"leadership, javascript, testing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teamwork, python, data analysis, java, creativity, leadership, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",1
+"creativity, cloud computing, java, project management",Graphic Designer,"design, creativity, communication",0
+"writing, design, creativity",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"javascript, teaching, creativity, java, writing, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"sql, java, debugging, testing, communication, leadership, creativity",Graphic Designer,"design, creativity, communication",0
+"teamwork, sql, testing, writing, creativity, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, teaching, design, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, creativity, python, communication, java, design, debugging",Project Manager,"leadership, project management, communication, teamwork",0
+"java, teamwork, teaching, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, writing, sql, problem solving, machine learning, cloud computing, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, communication, project management, teaching, sql, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"problem solving, machine learning, debugging, javascript, testing, leadership",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, design, leadership, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"problem solving, python, sql, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"machine learning, creativity, design, problem solving, javascript, data analysis, project management",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"communication, java, teamwork, python, project management, teaching, cloud computing",Graphic Designer,"design, creativity, communication",0
+"cloud computing, project management, teaching, design, communication",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, java, creativity, data analysis, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, project management, design",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"leadership, design, teamwork, javascript, machine learning, python, cloud computing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"javascript, project management, teamwork, creativity",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"sql, problem solving, design, leadership",Graphic Designer,"design, creativity, communication",0
+"leadership, project management, sql, python, javascript, problem solving, testing",Graphic Designer,"design, creativity, communication",0
+"testing, project management, problem solving, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"testing, leadership, machine learning, teamwork, cloud computing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"communication, design, javascript, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"java, communication, problem solving, sql, python",Project Manager,"leadership, project management, communication, teamwork",0
+"sql, design, leadership, cloud computing, communication, javascript, python",Graphic Designer,"design, creativity, communication",0
+"javascript, project management, python, testing, machine learning",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, sql, leadership, cloud computing, java, teaching, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teaching, project management, data analysis, design, javascript, debugging",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, leadership, cloud computing, writing, testing, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"testing, project management, teamwork",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, machine learning, design, project management, cloud computing",Graphic Designer,"design, creativity, communication",0
+"design, machine learning, leadership, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"design, writing, problem solving",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"design, java, cloud computing, problem solving, writing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, problem solving, debugging",Graphic Designer,"design, creativity, communication",0
+"design, machine learning, leadership, data analysis",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"teaching, data analysis, sql, design, problem solving, java",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, communication, machine learning, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"javascript, design, leadership, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"testing, communication, leadership, creativity",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"data analysis, testing, creativity, design",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"sql, cloud computing, creativity, python",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"leadership, teaching, debugging, machine learning, cloud computing, problem solving, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, writing, testing, data analysis, machine learning, teamwork",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, data analysis, cloud computing, debugging, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"problem solving, leadership, sql, writing, design, testing, java",Graphic Designer,"design, creativity, communication",0
+"machine learning, communication, teamwork",Graphic Designer,"design, creativity, communication",0
+"teaching, problem solving, sql, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"python, machine learning, communication, testing, writing, leadership, data analysis",Data Scientist,"python, machine learning, data analysis, sql, problem solving",1
+"leadership, java, debugging, data analysis, teamwork",Project Manager,"leadership, project management, communication, teamwork",0
+"teamwork, testing, cloud computing, python, debugging, creativity, project management",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"communication, testing, sql",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"testing, debugging, machine learning, design, java, writing, problem solving",Graphic Designer,"design, creativity, communication",0
+"data analysis, teaching, design",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"cloud computing, leadership, python, debugging, problem solving",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"cloud computing, creativity, leadership, java",Graphic Designer,"design, creativity, communication",0
+"problem solving, debugging, communication",Project Manager,"leadership, project management, communication, teamwork",0
+"data analysis, python, debugging, javascript, sql, machine learning, creativity",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, design, writing",Graphic Designer,"design, creativity, communication",0
+"creativity, teamwork, javascript, leadership, sql, teaching, data analysis",Graphic Designer,"design, creativity, communication",0
+"testing, sql, teamwork, cloud computing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"problem solving, project management, java, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, communication, teamwork",Graphic Designer,"design, creativity, communication",0
+"writing, project management, python, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"cloud computing, leadership, communication, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"writing, project management, data analysis, teamwork, java, leadership, testing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"writing, debugging, problem solving, python, teaching, machine learning",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"debugging, data analysis, teamwork, java",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"communication, design, creativity, python, data analysis, java, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, problem solving, leadership, teamwork, teaching",Teacher,"communication, teaching, leadership, creativity, problem solving",1
+"problem solving, javascript, communication, debugging, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"leadership, cloud computing, teaching, python, machine learning, design",Graphic Designer,"design, creativity, communication",0
+"creativity, python, teaching",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"java, python, writing, creativity, teaching, leadership",Graphic Designer,"design, creativity, communication",0
+"machine learning, python, project management, data analysis",Project Manager,"leadership, project management, communication, teamwork",0
+"communication, teaching, testing, creativity, leadership, sql, cloud computing",Software Engineer,"python, java, javascript, problem solving, teamwork",0
+"testing, problem solving, writing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"testing, project management, sql",Project Manager,"leadership, project management, communication, teamwork",0
+"project management, sql, design, problem solving",Project Manager,"leadership, project management, communication, teamwork",0
+"debugging, teamwork, javascript",Graphic Designer,"design, creativity, communication",0
+"data analysis, machine learning, sql",Graphic Designer,"design, creativity, communication",0
+"cloud computing, java, debugging, teamwork",Graphic Designer,"design, creativity, communication",0
+"data analysis, sql, javascript, testing, machine learning",Project Manager,"leadership, project management, communication, teamwork",0
+"data analysis, communication, javascript",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"sql, debugging, python",Graphic Designer,"design, creativity, communication",0
+"data analysis, problem solving, javascript, project management",Graphic Designer,"design, creativity, communication",0
+"project management, communication, teamwork, design",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"design, creativity, machine learning, leadership",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"debugging, design, cloud computing, testing",Teacher,"communication, teaching, leadership, creativity, problem solving",0
+"teaching, javascript, testing, teamwork, problem solving, debugging",Data Scientist,"python, machine learning, data analysis, sql, problem solving",0
+"creativity, communication, debugging, problem solving, leadership, machine learning, design",Teacher,"communication, teaching, leadership, creativity, problem solving",1
