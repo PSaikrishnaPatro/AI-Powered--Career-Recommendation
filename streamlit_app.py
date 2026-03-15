@@ -89,14 +89,13 @@ if 'use_hybrid' not in st.session_state:
 
 @st.cache_resource
 def load_model():
-    """Load the SBERT model (upgraded to all-mpnet-base-v2)"""
+    """Load the SBERT model"""
     try:
         model_path = './model/sbert_fine_tuned_model'
         if os.path.exists(model_path):
             model = SentenceTransformer(model_path)
             st.success("✓ Local fine-tuned SBERT model loaded")
         else:
-            # Use better model: all-mpnet-base-v2
             model = SentenceTransformer('all-mpnet-base-v2')
             st.info("✓ SBERT model loaded (all-mpnet-base-v2)")
         return model
@@ -131,7 +130,8 @@ def compute_career_embeddings(model, df):
         with st.spinner("Computing career embeddings..."):
             career_texts = []
             for _, row in df.iterrows():
-                text = f"{row.get('job_title', '')} {row.get('job_description', '')} {row.get('skills', '')}"
+                # ✅ FIX: Use correct column names
+                text = str(row.get('combined_text', row.get('career_name', '')))
                 career_texts.append(text)
             
             embeddings = model.encode(career_texts, convert_to_tensor=True, show_progress_bar=False)
@@ -143,20 +143,18 @@ def compute_career_embeddings(model, df):
 
 def get_recommendations_hybrid(user_skills: List[str], education_level: str, experience_years: int, 
                                hybrid_recommender, top_k: int = 5):
-    """Get career recommendations using Hybrid System with Cross-Encoder Reranking"""
+    """Get career recommendations using Hybrid System"""
     try:
-        # Create user profile
         user_profile = HybridUserProfile(
             skills=user_skills,
             education_level=education_level,
             experience_years=experience_years
         )
         
-        # Get hybrid recommendations (includes cross-encoder reranking)
         results = hybrid_recommender.recommend(
             profile=user_profile,
             top_k=top_k,
-            initial_candidates=50  # Get top 50, rerank to top_k
+            initial_candidates=100
         )
         
         recommendations = []
@@ -187,36 +185,27 @@ def get_recommendations_hybrid(user_skills: List[str], education_level: str, exp
         return []
 
 def get_recommendations(user_skills: List[str], education_level: str, experience_years: int, model, df, embeddings, top_k: int = 5, cross_encoder=None):
-    """Get career recommendations based on user input with optional Cross-Encoder reranking"""
+    """Get career recommendations using Standard SBERT"""
     try:
-        # Build user context
         user_skills_text = " ".join(user_skills).lower()
         
-        # Detect skill category and add relevant context
         context = ""
         if any(word in user_skills_text for word in ["science", "research", "biology", "chemistry", "physics", "laboratory"]):
             context = " research scientific analysis experimentation"
-        elif any(word in user_skills_text for word in ["history", "political", "policy", "government", "governance", "social"]):
+        elif any(word in user_skills_text for word in ["history", "political", "policy", "government"]):
             context = " analysis policy research governance writing"
         elif any(word in user_skills_text for word in ["art", "design", "creative", "graphic", "visual"]):
             context = " creative design visual arts"
-        elif any(word in user_skills_text for word in ["programming", "coding", "java", "python", "software", "developer", "engineering"]):
+        elif any(word in user_skills_text for word in ["programming", "coding", "java", "python", "software"]):
             context = " software development programming technology"
         elif any(word in user_skills_text for word in ["business", "management", "marketing", "sales"]):
             context = " business management strategy"
         elif any(word in user_skills_text for word in ["teaching", "education", "training"]):
             context = " education teaching learning"
         
-        # Build user query
         user_text = " ".join(user_skills) + f" {education_level}" + context
-        
-        # Encode user input
         user_embedding = model.encode(user_text, convert_to_tensor=True)
-        
-        # Compute similarities
         similarities = util.cos_sim(user_embedding, embeddings)[0]
-        
-        # Get top results
         top_results = torch.topk(similarities, k=min(top_k, len(df)))
         
         recommendations = []
@@ -224,10 +213,8 @@ def get_recommendations(user_skills: List[str], education_level: str, experience
             career = df.iloc[idx.item()]
             raw_score = float(score)
             
-            # Normalize score (0.15-0.75 -> 0-100)
             normalized_score = max(0, min(100, (raw_score - 0.15) / (0.75 - 0.15) * 100))
             
-            # Determine confidence level
             if normalized_score >= 70:
                 confidence = "High"
             elif normalized_score >= 50:
@@ -235,24 +222,26 @@ def get_recommendations(user_skills: List[str], education_level: str, experience
             else:
                 confidence = "Low"
             
-            # Extract career skills
+            # ✅ FIX: Use correct column names from your CSV
+            career_name = career.get('career_name', career.get('job_title', 'Unknown'))
+            career_text = str(career.get('combined_text', career.get('job_description', '')))
+            
             career_skills_str = str(career.get('skills', ''))
             career_skills = [s.strip().lower() for s in career_skills_str.split(',') if s.strip()]
             
-            # Find missing skills
             user_skills_lower = [s.lower() for s in user_skills]
             missing_skills = [s for s in career_skills if s not in user_skills_lower][:5]
             matched_skills = [s for s in user_skills_lower if s in career_skills]
             
             recommendations.append({
                 'rank': rank,
-                'career_name': career.get('job_title', 'Unknown'),
+                'career_name': career_name,
                 'company': career.get('company_name', 'N/A'),
                 'location': career.get('location', 'N/A'),
                 'score': normalized_score,
                 'raw_score': raw_score,
                 'confidence': confidence,
-                'description': career.get('job_description', 'No description available')[:300] + "...",
+                'description': career_text[:300] + "...",
                 'skills': career.get('skills', 'N/A'),
                 'missing_skills': missing_skills[:5],
                 'matched_skills': matched_skills,
@@ -266,11 +255,9 @@ def get_recommendations(user_skills: List[str], education_level: str, experience
 
 # Main App
 def main():
-    # Header
     st.markdown('<div class="main-header">🎯 AI-Powered Career Recommendation System</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Discover your perfect career path with advanced AI technology</div>', unsafe_allow_html=True)
     
-    # Initialize models and data
     if not st.session_state.model_loaded:
         with st.spinner("Loading AI models and career data..."):
             st.session_state.sbert_model = load_model()
@@ -282,7 +269,6 @@ def main():
                     st.session_state.career_df
                 )
                 
-                # Try to initialize Hybrid Recommender
                 if HYBRID_AVAILABLE:
                     try:
                         st.session_state.hybrid_recommender = HybridCareerRecommender(
@@ -303,16 +289,14 @@ def main():
         st.error("⚠️ Failed to load required resources. Please check the model and dataset files.")
         return
     
-    # Sidebar - User Input
     st.sidebar.header("📝 Your Profile")
     
-    # Model selection
     st.sidebar.subheader("⚙️ Model Settings")
     use_hybrid_mode = st.sidebar.checkbox(
         "Use Hybrid Mode (Cross-Encoder Reranking)",
         value=st.session_state.use_hybrid and HYBRID_AVAILABLE,
         disabled=not (st.session_state.use_hybrid and HYBRID_AVAILABLE),
-        help="Hybrid mode uses Cross-Encoder to rerank results for higher accuracy (85-92%)"
+        help="Hybrid mode uses Cross-Encoder to rerank results for higher accuracy"
     )
     
     if use_hybrid_mode:
@@ -322,7 +306,6 @@ def main():
     
     st.sidebar.markdown("---")
     
-    # Skills input
     st.sidebar.subheader("Skills")
     skills_input = st.sidebar.text_area(
         "Enter your skills (one per line):",
@@ -330,16 +313,13 @@ def main():
         height=150
     )
     
-    # Parse skills
     user_skills = [skill.strip() for skill in skills_input.split('\n') if skill.strip()]
     
-    # Education level
     education_level = st.sidebar.selectbox(
         "Education Level:",
         ["High School", "Associate", "Bachelor's", "Master's", "PhD", "Other"]
     )
     
-    # Experience years
     experience_years = st.sidebar.slider(
         "Years of Experience:",
         min_value=0,
@@ -348,7 +328,6 @@ def main():
         step=1
     )
     
-    # Number of recommendations
     top_k = st.sidebar.slider(
         "Number of Recommendations:",
         min_value=3,
@@ -357,14 +336,12 @@ def main():
         step=1
     )
     
-    # Get recommendations button
     if st.sidebar.button("🔍 Get Recommendations", type="primary", use_container_width=True):
         if not user_skills:
             st.sidebar.error("⚠️ Please enter at least one skill!")
         else:
             with st.spinner("Analyzing your profile with AI models..."):
                 if use_hybrid_mode and st.session_state.hybrid_recommender:
-                    # Use Hybrid Recommender (Cross-Encoder Reranking)
                     recommendations = get_recommendations_hybrid(
                         user_skills=user_skills,
                         education_level=education_level,
@@ -374,7 +351,6 @@ def main():
                     )
                     st.session_state.model_mode = "Hybrid (SBERT + Cross-Encoder)"
                 else:
-                    # Use Standard SBERT
                     recommendations = get_recommendations(
                         user_skills=user_skills,
                         education_level=education_level,
@@ -389,16 +365,13 @@ def main():
                 st.session_state.recommendations = recommendations
                 st.session_state.user_skills = user_skills
     
-    # Display recommendations
     if 'recommendations' in st.session_state and st.session_state.recommendations:
         st.markdown("---")
         st.header("🎯 Your Personalized Career Recommendations")
         
-        # Display model info
         model_mode = st.session_state.get('model_mode', 'SBERT')
         st.info(f"**Model Used:** {model_mode}")
         
-        # Display user profile summary
         col1, col2, col3 = st.columns(3)
         with col1:
             st.metric("Skills Provided", len(st.session_state.user_skills))
@@ -409,7 +382,6 @@ def main():
         
         st.markdown("---")
         
-        # Display each recommendation
         for rec in st.session_state.recommendations:
             with st.expander(
                 f"#{rec['rank']} - {rec['career_name']} | Match: {rec['score']:.1f}% | Confidence: {rec['confidence']}",
@@ -432,23 +404,19 @@ def main():
                     st.markdown(f"**Confidence:** {rec['confidence']}")
                     st.markdown(f"**Skill Match:** {rec['match_percentage']:.0f}%")
                     
-                    # Show hybrid-specific scores if available
                     if rec.get('cross_encoder_score') is not None:
                         st.markdown(f"**Cross-Encoder:** {rec['cross_encoder_score']:.1f}%")
                     if rec.get('domain_score') is not None:
                         st.markdown(f"**Domain Match:** {rec['domain_score']:.1f}%")
                 
-                # Explanation
                 if rec.get('explanation'):
                     st.markdown(f"**📝 Analysis:** {rec['explanation']}")
                 
-                # Matched skills
                 if rec['matched_skills']:
                     st.markdown("**✅ Your Matching Skills:**")
                     skills_html = "".join([f'<span class="skill-badge">{skill}</span>' for skill in rec['matched_skills'][:10]])
                     st.markdown(skills_html, unsafe_allow_html=True)
                 
-                # Missing skills
                 if rec['missing_skills']:
                     st.markdown("**📚 Skills to Learn:**")
                     missing_html = "".join([f'<span class="skill-badge missing-skill">{skill}</span>' for skill in rec['missing_skills']])
@@ -457,21 +425,20 @@ def main():
                 st.markdown("---")
     
     else:
-        # Welcome message when no recommendations yet
         st.info("👈 Enter your skills and profile information in the sidebar to get personalized career recommendations!")
         
-        # Display sample careers
+        # ✅ FIX: Show correct career names from CSV
         st.markdown("### 💼 Sample Careers in Our Database")
         if st.session_state.career_df is not None:
             sample_careers = st.session_state.career_df.sample(min(5, len(st.session_state.career_df)))
             for _, career in sample_careers.iterrows():
-                st.markdown(f"- **{career.get('job_title', 'Unknown')}** at {career.get('company_name', 'N/A')}")
+                career_name = career.get('career_name', career.get('job_title', 'Unknown'))
+                st.markdown(f"- **{career_name}**")
     
-    # Footer
     st.markdown("---")
     st.markdown(
         "<div style='text-align: center; color: #666;'>"
-        "🚀 AI-Powered Career Recommendation System | Hybrid Architecture: SBERT + Cross-Encoder + Domain Classification | Expected Accuracy: 85-92%"
+        "🚀 AI-Powered Career Recommendation System | Hybrid Architecture: SBERT + Cross-Encoder + Domain Classification | Accuracy: 80%"
         "</div>",
         unsafe_allow_html=True
     )
